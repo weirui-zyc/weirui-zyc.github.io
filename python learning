@@ -18,3 +18,95 @@ print（） 要顶格写
 run to cursor 是跳到下一个断点
 单行注释是 # 
 多行注释是 三对单引号 三对多引号 ’’’   ” ” ”
+
+
+# #part 1
+# print("hello world")
+# #    print()这个输出会出现错误
+# #遇到eyntaxerror 说明是语法错误 
+# #python 里面必须要一个print在一行 不能两个print在同一行
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# print(1230)
+# #crtl+/ 可以进行多行注释 也可以取消注释
+# print("ABS")
+# #可以依次输出很多句话时，需要用逗号间隔开---对应的输出是空格隔开
+# print('哈哈哈'"xixixi","dududu")
+# #sep 函数    如果不想使用空格的话。可以使用---sep函数，sep后面是什么就用什么符号分割开.同时sep后面必须使用引号
+# print('哈哈哈',"xixixi","dududu",sep="|")
+# #end 函数 用来设定以什么什么结尾，默认值是换行符号\n，可以切换成其他字符串
+# print('哈哈哈',"xixixi","dududu",end="、")
+# print("大蟑螂")
+
+# #part 2 变量 用于存储保存数据
+# #定义变量的格式
+# #变量名 = 值
+# a=1 # =是进行赋值运算符，左右两边有空格是为了代码的规范性和美观性
+# b=2
+# total= a+b 
+# print(total)
+
+# #变量只有在赋值之后才可以使用
+# c=a
+# print(a)
+# a=999
+# print(a)#同一个变量可以反复赋值
+
+# # 标识符
+# #含义：程序员定义的函数名 表述名
+# #标识符：只能由数字、字母、或者下划线组成 ；不能以数字开头； 不能是关键字 ；严格区分大小写
+# _app=1024
+# cost=12
+# 价格=1
+# print(_app)
+# print(cost)
+# print(价格)#python 3 允许 文字进行赋值
+# (user)=2234#为什么没有报错呢？ 标识符可以包含在括号内
+# print(user)
+# #但是！！！ 标识符必须全部都在括号里面才ok
+# #关键字 是python 里面已经设定的文字
+# #变量命名：
+# #见名知道意思： name='zyc' ； 下划线分割法 use_name='zyc' ; 
+# # 大驼峰命名 UserName='zyc'（每个单词的首字母大写） ；小驼峰命名 userName='zyc'（第一个单词小写 后面每个单词的首字母都大写）
+
+
+# #数值类型： int 整型；float 浮点型（精度约为小数点第七位）；
+# #bool 布尔型： 有固定写法 True 和False 注意 True 和False 必须是这个样子 必须严格区分大小写 bool值可以当作整型对待 True---1 False---0 
+# #复数型 z = a + bj 其中a 表示的是实部分 b 表示的是虚部 j是固定的 不能写i
+# #type（） 可以查看类型
+# seq=2.34
+# print(type(seq))
+# print(true)#这个会报错
+# print(True+False)
+# ma= 1+2j
+# mb=10+123j
+# mc=ma+mb
+# print(mc)
+
+# #字符串类型 要带有单引号或者双引号（三引号可以多行）
+
+# _mame="""zyc
+# chaoji
+# wudi"""
+# name='zyc0'
+# print(name,_mame,end="and",sep="//")
+
+#占位符
+#  %d 整型的占位符  %s 字符串的占位符； %f 是浮点数的占位符(默认是保留小数点后6位的，遵循四舍五入原则)  %%这个是保留%(但是后面必须有%（）)
+#%4d 这种。数字不够的话 前面补充空白；少了的话 原样输出；可以是%04这种 这样的话前面就都补充0
+#和C语言不一样的是 多个占位符必须用括号
+name="zyc"
+age=17
+a=123.23455553
+print("我的名字 %s"%name) 
+print("我的名字 %s,我的年龄 %4d"%(name,age)) 
+print("我的名字 %s,我的年龄 %1d"%(name,age)) 
+print("我的名字 %s,我的年龄 %04d"%(name,age)) 
+print("%.4f"%a)#数字设置小数位数，超过小数位数 后面补充0
+print("woshi%%的1%%"%())
